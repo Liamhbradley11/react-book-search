@@ -1,0 +1,4 @@
+.jumbotron {
+    background-image: url("/books.jpeg");
+    background-size: cover;
+}
