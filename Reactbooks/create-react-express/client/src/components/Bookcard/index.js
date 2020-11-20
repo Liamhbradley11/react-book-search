@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-function bookcard(props) {
+function Bookcard(props) {
   return (
     <div className="card" >
       <div className="img-container">
@@ -17,4 +17,4 @@ function bookcard(props) {
     </div>
   );
 }
-export default bookcard;
+export default Bookcard;

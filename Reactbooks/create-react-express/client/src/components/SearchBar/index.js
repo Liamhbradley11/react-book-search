@@ -1,16 +1,15 @@
 import React from "react";
 // This file exports the Input, TextArea, and FormBtn components
-export function Input(props) {
+
+
+// By extending the React.Component class, Counter inherits functionality from it
+function SearchBar(props){
   return (
-    <div className="form-group">
-      <input className="form-control" {...props} />
-    </div>
-  );
-}
-export function SearchBtn(props) {
-  return (
-    <button {...props} style={{ float: "right", marginBottom: 10 }} className="btn btn-success">
-      {props.children}
-    </button>
-  );
-}
+      <form className="form-group">
+        <input className="searchbar" placeholder="Please Enter a Title" onChange={(event) => props.handleSubmit(event)}></input>
+        <button className="btn btn-secondary" type="submit">
+          Submit
+        </button> 
+      </form>
+  )}
+export default SearchBar;
