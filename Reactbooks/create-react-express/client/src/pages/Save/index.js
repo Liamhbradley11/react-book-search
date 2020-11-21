@@ -6,23 +6,22 @@ import Bookcard from "../../components/Bookcard";
 import Jumbotron from "../../components/Jumbotron";
 
 
-class Save extends Component {
+function Save() {
 
-    render() {
-        return (
+    return (
 
-            <Wrapper>
+        <Wrapper>
 
-                <Navbar />
-                <Jumbotron />
-                <Container>
-                    <Bookcard />
-                </Container>
+            <Navbar />
+            <Jumbotron />
+            <Container>
+                <Bookcard />
+            </Container>
 
-            </Wrapper>
+        </Wrapper>
 
-        );
-    }
+    );
 }
+
 
 export default Save;

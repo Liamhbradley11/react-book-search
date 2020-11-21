@@ -1,5 +1,7 @@
 import React from "react";
 import "./style.css";
+
+
 function Bookcard(props) {
   return (
     <div className="card" >
@@ -7,13 +9,13 @@ function Bookcard(props) {
         <img alt={props.id} src={props.image} />
       </div>
       <div>
-        <h1 className={props.title} />
-        <h2 className={props.authors} />
-        <p className={props.description} />
-        <p className={props.link} />
+        <h1 className="card-title">{`${props.title}`}</h1>
+        <h2 className="card-subtitle">{`${props.authors}`}</h2>
+        <p className="card-text">{`${props.description}`}</p>
+        <p className="card-text">{`${props.link}`}</p>
       </div>
-      <div button onClick={() => props.saveBook(props.id)} className="save"></div>
-      <div button onClick={() => props.deleteBook(props.id)} className="delete"></div>
+      <button className="btn btn-info" onClick={() => props.saveBook(props.id)}>Save</button>
+      <button className="btn btn-secondary" onClick={() => props.deleteBook(props.id)}>Delete</button>
     </div>
   );
 }
