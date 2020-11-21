@@ -15,7 +15,7 @@ if (process.env.NODE_ENV === "production") {
 // Define API routes here
 
 app.use("/api", api-routes);
-app.use("", google)
+app.use("/google", google)
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
