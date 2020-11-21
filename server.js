@@ -3,7 +3,11 @@ const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const mongoose = require("mongoose");
+<<<<<<< HEAD:Reactbooks/create-react-express/server.js
 const apiroutes = require("./routes/api-routes")
+=======
+const apiRoutes = require("routes/api-routes.js");
+>>>>>>> 66504503aea44fd3f68bbf7aca0a7e8b24ff909f:server.js
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -15,8 +19,12 @@ if (process.env.NODE_ENV === "production") {
 
 // Define API routes here
 
+<<<<<<< HEAD:Reactbooks/create-react-express/server.js
 app.use("/api", apiroutes);
 
+=======
+app.use("/api", apiRoutes);
+>>>>>>> 66504503aea44fd3f68bbf7aca0a7e8b24ff909f:server.js
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
