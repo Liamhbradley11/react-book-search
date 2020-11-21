@@ -3,11 +3,15 @@ const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const mongoose = require("mongoose");
+<<<<<<< HEAD
 <<<<<<< HEAD:Reactbooks/create-react-express/server.js
 const apiroutes = require("./routes/api-routes")
 =======
 const apiRoutes = require("routes/api-routes.js");
 >>>>>>> 66504503aea44fd3f68bbf7aca0a7e8b24ff909f:server.js
+=======
+const apiRoutes = require("./routes/api-routes.js");
+>>>>>>> 91f0046a5e33003cd1a970db3ac4aa48b46a1eff
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
