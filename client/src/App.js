@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, HashRouter } from "react-router-dom";
+import { Route, BrowserRouter } from "react-router-dom";
 import Search from "./pages/Search";
 
 import Save from "./pages/Save";
@@ -7,7 +7,7 @@ import NoMatch from "./pages/NoMatch";
 
 function App() {
   return (
-    <HashRouter basename="/" >
+    <BrowserRouter basename="/" >
       <div>
       
             <Route exact path="/" component={Search} />
@@ -17,7 +17,7 @@ function App() {
             <Route component={NoMatch} />
 
       </div>
-    </HashRouter>
+    </BrowserRouter>
 
 
   );
