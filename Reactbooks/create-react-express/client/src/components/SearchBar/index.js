@@ -5,10 +5,10 @@ import React from "react";
 
 
 // By extending the React.Component class, Counter inherits functionality from it
-function SearchBar(props){
+function SearchBar(props, handleSubmit, handleInput){
   return (
       <form className="form-group" id="searchform" onSubmit={(event) => props.handleSubmit(event)}>
-        <input className="searchbar" placeholder="Please Enter a Title"></input>
+        <input className="searchbar" placeholder="Please Enter a Title"onInput={(event) => props.handleInput(event)}/>
         <button className="btn btn-secondary" type="submit">
           Submit
         </button> 

@@ -14,8 +14,8 @@ function Bookcard(props) {
         <p className="card-text">{`${props.description}`}</p>
         <p className="card-text">{`${props.link}`}</p>
       </div>
-      <div button onClick={() => props.saveBook(props.id)} className="save"></div>
-      <div button onClick={() => props.deleteBook(props.id)} className="delete"></div>
+      <button className="btn btn-info" onClick={() => props.saveBook(props.id)}>Save</button>
+      <button className="btn btn-secondary" onClick={() => props.deleteBook(props.id)}>Delete</button>
     </div>
   );
 }

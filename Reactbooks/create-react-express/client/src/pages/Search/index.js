@@ -4,16 +4,10 @@ import Navbar from "../../components/Navbar";
 import Wrapper from "./../../components/Wrapper";
 import SearchBar from "../../components/SearchBar";
 import { Container } from "../../components/Grid";
-import axios from "axios";
 import Bookcard from "../../components/Bookcard";
+import API from "../../utils/Api"
 
 
-
-
-//     function handleChange(event) {
-//         const book = event.target.value;
-//         setBook(book);
-//     };
 
 
 
@@ -21,33 +15,26 @@ function Search() {
 
     const [book, setBook] = useState("");
     const [result, setResult] = useState([]);
+    const [search, setSearch] = useState("");
 
+    const handleInput = event => {
+        setSearch(event.target.value)
+
+    }
 
     function handleSubmit(event) {
+        const bookEntry = event.target.value;
         event.preventDefault();
         console.log({ event })
 
-        axios.get("https://www.googleapis.com/books/v1/volumes?q=" + event.target.value)
+        API.getBooks(search)
             .then(data => {
                 console.log(data.data.items);
                 setResult(data.data.items);
             })
     }
 
-    // function handleSubmit(event) {
-    //     event.preventDefault();
-    //     console.log({ event })
 
-    //     axios.get("https://www.googleapis.com/books/v1/volumes?q=" + event.target.value)
-    //         .then(data => {
-    //             console.log(data.data.items);
-    //             setResult(data.data.items);
-    //         })
-    // }
-
-
-
-    console.log({ result });
 
     return (
 
@@ -56,18 +43,20 @@ function Search() {
             <Navbar />
             <Jumbotron />
             <Container>
-                <SearchBar handleSubmit={handleSubmit} />
+                <SearchBar handleSubmit={handleSubmit}
+                handleInput={handleInput}
+                />
                 {result.map((searchedbooks) => (
                     <Bookcard
-                    id={searchedbooks.id}
-                    image={searchedbooks.image}
-                    title={searchedbooks.title}
-                    authors={searchedbooks.authors}
-                    description={searchedbooks.description}
-                    link={searchedbooks.link}
+                        id={searchedbooks.volumeInfo.id}
+                        image={searchedbooks.volumeInfo.imageLinks.thumbnail}
+                        title={searchedbooks.volumeInfo.title}
+                        authors={searchedbooks.volumeInfo.authors}
+                        description={searchedbooks.volumeInfo.description}
+                        link={searchedbooks.volumeInfo.infoLink}
                     />
                 ))}
-                
+
             </Container>
 
         </Wrapper>
