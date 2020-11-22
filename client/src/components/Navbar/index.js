@@ -13,7 +13,7 @@ function Nav() {
                         <Link className="nav-link" to="/"><button type="button" className="btn btn-warning text-white">Search Books</button></Link>
                     </li>
                     <li className="nav-item" id="report">
-                        <Link className="nav-link" to="/save"><button type="button" className="btn btn-warning text-white">Saved Books</button></Link>
+                        <Link className="nav-link" to="/saved"><button type="button" className="btn btn-warning text-white">Saved Books</button></Link>
                     </li>
                 </ul>
             </div>
