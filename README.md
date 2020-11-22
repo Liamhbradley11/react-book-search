@@ -1,6 +1,6 @@
-# REact Book Search
+# React Book Search
 
-I created a website using HTML, CSS and utilzing my knowledge of React.js I created a navigation bar with working links to the other pages. I created a card displaying my image and information about myself. I also created ways to dynamically generate my portfolio and create a form in which potential employers can contact me. 
+I created a website a google books search directory. It allows you to be able to search for your favorite books through the book library. When you find the book you are looing for it allows you to save you book of choice to the database so that you can look back later. This application is a full stack mern application, using Mongo, Node, React and Express.
 
 ### Screenshots
 
@@ -16,11 +16,12 @@ I created a website using HTML, CSS and utilzing my knowledge of React.js I crea
 * [React.js](https://reactjs.org/)
 * [Node.js](https://nodejs.org/en/)
 * [Express.js](http://expressjs.com/)
+* [Mongo](https://www.mongodb.com/)
 
 
 ## Deployed Link
 
-* [See Live Site](https://gentle-shelf-67923.herokuapp.com/)
+* [See Live Site](https://damp-taiga-22990.herokuapp.com/)
 
 
 ## Author
