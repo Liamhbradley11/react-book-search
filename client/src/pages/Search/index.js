@@ -9,7 +9,6 @@ import Bookcard from "../../components/Bookcard";
 import API from "../../utils/Api"
 
 
-
 function Search() {
     const [book, setBook] = useState("");
     const [result, setResult] = useState([]);
