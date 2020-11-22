@@ -1,8 +1,7 @@
 import React from "react";
 import "./style.css";
-
-
 function Bookcard(props) {
+  console.log({props});
   return (
     <div className="card" >
       <div className="img-container">
@@ -12,10 +11,9 @@ function Bookcard(props) {
         <h1 className="card-title">{`${props.title}`}</h1>
         <h2 className="card-subtitle">{`${props.authors}`}</h2>
         <p className="card-text">{`${props.description}`}</p>
-        <p className="card-text">{`${props.link}`}</p>
       </div>
-      <button className="btn btn-info" onClick={() => props.saveBook(props.id)}>Save</button>
-      <button className="btn btn-secondary" onClick={() => props.deleteBook(props.id)}>Delete</button>
+      {props.showSave && <button className="btn btn-info" onClick={() => props.saveBook(props)}>Save</button> }
+      {props.showDelete && <button className="btn btn-secondary" onClick={() => props.deleteBook(props)}>Delete</button>}
     </div>
   );
 }
