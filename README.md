@@ -4,7 +4,7 @@ I created a website a google books search directory. It allows you to be able to
 
 ### Screenshots
 
-![About_Me](img/googlebooks.PNG)
+![About_Me](./client/public/img/googlebooks.PNG)
 
 
 
