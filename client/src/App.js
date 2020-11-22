@@ -11,8 +11,8 @@ function App() {
       <div>
       
             <Route exact path="/" component={Search} />
-            <Route exact path="/Search" component={Search} />
-            <Route exact path="/Saved" component={Save} />
+            <Route exact path="/search" component={Search} />
+            <Route path="/save" component={Save} />
             <Route component={NoMatch} />
 
       </div>
