@@ -12,8 +12,7 @@ function App() {
       
             <Route exact path="/" component={Search} />
             <Route exact path="/Search" component={Search} />
-            <Route exact path="/Save" component={Save} />
-            <Route exact path="/Save/:id" component={Save} />
+            <Route exact path="/Saved" component={Save} />
             <Route component={NoMatch} />
 
       </div>
